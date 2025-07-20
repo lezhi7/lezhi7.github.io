@@ -19,6 +19,12 @@ jobs:
         with:
           persist-credentials: false
 
+      # 设置 Node.js 环境
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
       # 生成静态文件
       - name: Build
         run: npm install && npm run docs:build
